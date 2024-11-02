@@ -58,7 +58,7 @@ class Category
 
             return true;
         } catch (PDOException $e) {
-            die($e->getMessage());
+//            die($e->getMessage());
             echo 'Error: ' .$e->getMessage();
         }
     }
