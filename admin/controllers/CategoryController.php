@@ -62,7 +62,7 @@ class CategoryController
         }
     }
 
-//    Ham hien thi form sua
+    // Ham hien thi form sua
     public function edit()
     {
         // lay id
@@ -71,13 +71,46 @@ class CategoryController
         $category = $this->modelCategory->getDetailData($id);
 
         // do du lieu ra form
-
+        require_once './views/category/edit_category.php';
     }
 
-//   Ham xu ly cap nhat du lieu vao CSDL
+    // Ham xu ly cap nhat du lieu vao CSDL
     public function update()
     {
+//        error_log("update item");
 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // lay ra du lieu
+            $id = $_POST['id'];
+            $category_name = $_POST['category_name'];
+            $category_status = $_POST['category_status'];
+
+//            die($category_status  );
+            // validate
+            $errors = [];
+            if (empty($category_name)) {
+                $errors['category_name'] = "Tên danh mục là bắt buộc";
+            }
+            if (empty($category_status)) {
+                $errors['category_status'] = "Trạng thái là bắt buộc";
+            }
+
+            // Cap nhat du lieu
+            if (empty($errors)) {
+                // Neu khong co loi thi them du lieu
+                // Them vao CSDL
+                $this->modelCategory->updateData($id, $category_name, $category_status);
+                unset($_SESSION['errors']);
+                header('Location: ?act=categories');
+                exit();
+            } else {
+                $_SESSION['errors'] = $errors;
+                header('Location: ?act=form_edit_category');
+                exit();
+            }
+        } else {
+
+        }
     }
 
 //   Ham xoa du lieu trong CSDL

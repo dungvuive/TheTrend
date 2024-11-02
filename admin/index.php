@@ -28,4 +28,7 @@ match ($act) {
     'form_edit_category' => (new CategoryController())->edit(),
     'update_category' => (new CategoryController())->update(),
     'delete_category' => (new CategoryController())->delete(),
+
+    // Quan ly san pham
+
 };

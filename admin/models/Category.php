@@ -41,6 +41,28 @@ class Category
         }
     }
 
+    // cap nhat du lieu vao CSDL
+    public function updateData($id, $category_name, $category_status) {
+        try {
+
+            $sql = "UPDATE categories SET category_name = :category_name, status = :status WHERE category_id = :id";
+
+            $stmt = $this->conn->prepare($sql);
+
+            // gan gia tri vao cac tham so
+            $stmt->bindParam(':id', $id);
+            $stmt->bindParam(':category_name', $category_name);
+            $stmt->bindParam(':status', $category_status);
+
+            $stmt->execute();
+
+            return true;
+        } catch (PDOException $e) {
+            die($e->getMessage());
+            echo 'Error: ' .$e->getMessage();
+        }
+    }
+
     // lay thong tin chi tiet
     public function getDetailData($id) {
         try {
