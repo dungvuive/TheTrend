@@ -16,7 +16,6 @@
     <?php
     require_once "layouts/libs_css.php";
     ?>
-
 </head>
 
 <body>
