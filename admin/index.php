@@ -8,9 +8,11 @@ require_once '../commons/function.php'; // Hàm hỗ trợ
 // Require toàn bộ file Controllers
 require_once 'controllers/DashboardController.php';
 require_once 'controllers/CategoryController.php';
+require_once 'controllers/ProductController.php';
 
 // Require toàn bộ file Models
 require_once 'models/Category.php';
+require_once 'models/Product.php';
 
 // Route
 $act = $_GET['act'] ?? '/';
@@ -30,5 +32,12 @@ match ($act) {
     'delete_category' => (new CategoryController())->delete(),
 
     // Quan ly san pham
+    'products' => (new ProductController())->index(),
+    'form_add_product' => (new ProductController())->create(),
+    'add_product' => (new ProductController())->add(),
+    'form_edit_product' => (new ProductController())->edit(),
+    'update_product' => (new ProductController())->update(),
+    'delete_product' => (new ProductController())->delete(),
+
 
 };
