@@ -68,13 +68,14 @@
                             <div class="card">
                                 <div class="card-header align-items-center d-flex">
                                     <h4 class="card-title mb-0 flex-grow-1">Danh Sách Sản Phẩm</h4>
-<!--                                    search form-->
+                                    <!--Search form-->
                                     <form class="d-flex justify-content-center" role="search">
                                         <input class="form-control me-2 w-50 " type="search" placeholder="Tìm kiếm..." aria-label="Search">
                                         <button class="btn btn-outline-primary" type="submit">Tìm kiếm</button>
                                     </form>
                                     <a href="?act=form_add_product" class="btn btn-soft-primary material-shadow-none"><i class="ri-add-circle-line align-middle me-1"></i>Thêm Sản Phẩm</a>
-                                </div><!-- end card header -->
+                                </div>
+                                <!-- end card header -->
 
                                 <div class="card-body">
                                     <div class="live-preview">
@@ -110,7 +111,7 @@
 
                                                                 <form action="?act=delete_product" method="POST"
                                                                       onsubmit="return confirm('Bạn có muốn xóa không?')">
-                                                                    <input type="hidden" name="product_ID" value="<?= $category['product_id'] ?>">
+                                                                    <input type="hidden" name="product_ID" value="<?= $product['product_id'] ?>">
                                                                     <button type="submit" class="link-danger fs-15" style="border: none; background: none;">
                                                                         <i class="ri-delete-bin-line"></i>
                                                                     </button>

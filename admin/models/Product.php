@@ -62,6 +62,27 @@ class Product
         }
     }
 
+    public function updateData($id, $product_name, $description, $price, $stock) {
+        try {
+
+            $sql = "UPDATE products SET product_name = :product_name, description = :description, price = :price, stock = :stock  WHERE product_id = :id";
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->bindParam(':id', $id);
+            $stmt->bindParam(':product_name', $product_name);
+            $stmt->bindParam(':description', $description);
+            $stmt->bindParam(':price', $price);
+            $stmt->bindParam(':stock', $stock);
+
+            $stmt->execute();
+
+            return true;
+        } catch (PDOException $e) {
+//            die($e->getMessage());
+            echo 'Error: ' .$e->getMessage();
+        }
+    }
+
 
 
 

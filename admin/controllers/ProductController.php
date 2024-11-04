@@ -28,6 +28,7 @@
              $description = $_POST['description'];
              $price = $_POST['price'];
              $stock = $_POST['stock'];
+             var_dump($_POST);
 
              // validate
              $errors = [];
@@ -59,7 +60,54 @@
          }
      }
 
+     public function edit()
+     {
+         // lay id
+         $id = $_GET['product_ID'];
+         // lay thong tin chi tiet cua danh muc
+         $product = $this->modelProduct->getProductById($id);
 
+         // do du lieu ra form
+         require_once './views/product/edit_product.php';
+     }
+
+     public function update()
+     {
+         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+             $id = $_POST['id'];
+             $image = $_POST['image'];
+             $product_name = $_POST['product_name'];
+             $description = $_POST['description'];
+             $price = $_POST['price'];
+             $stock = $_POST['stock'];
+
+             // validate
+             $errors = [];
+             if (empty($product_name)) {
+                 $errors['product_name'] = "Tên sản phẩm là bắt buộc";
+             }
+             if (empty($price)) {
+                 $errors['price'] = "Giá là bắt buộc";
+             }
+             if (empty($stock)) {
+                 $errors['stock'] = "Số lượng hàng trong kho là bắt buộc";
+             }
+
+             // Cap nhat du lieu
+             if (empty($errors)) {
+                 $this->modelProduct->updateData($id, $product_name, $description, $price, $stock);
+                 unset($_SESSION['errors']);
+                 header('Location: ?act=products');
+                 exit();
+             } else {
+                 $_SESSION['errors'] = $errors;
+                 header('Location: ?act=form_edit_product');
+                 exit();
+             }
+         } else {
+
+         }
+     }
 
 
      public function delete()

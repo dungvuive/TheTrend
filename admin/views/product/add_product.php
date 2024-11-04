@@ -88,21 +88,21 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="citynameInput" class="form-label">Mô Tả</label>
-                                                        <input type="text" class="form-control" placeholder="Nhap mo ta..." name="category_name">
+                                                        <input type="text" class="form-control" placeholder="Nhap mo ta..." name="description">
                                                     </div>
                                                 </div>
                                                 <!--end col-->
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label for="citynameInput" class="form-label">Giá</label>
-                                                        <input type="text" class="form-control" placeholder="Nhap gia..." name="category_name">
+                                                        <input type="text" class="form-control" placeholder="Nhap gia..." name="price">
                                                         <span class="text-danger">
                                                             <?= !empty($_SESSION['errors']['price']) ? $_SESSION['errors']['price'] : '' ?>
                                                         </span>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="citynameInput" class="form-label">Số lượng hàng trong kho</label>
-                                                        <input type="text" class="form-control" placeholder="Nhập so luong hang hoa trong kho..." name="category_name">
+                                                        <input type="text" class="form-control" placeholder="Nhap so luong hang hoa trong kho..." name="stock">
                                                         <span class="text-danger">
                                                             <?= !empty($_SESSION['errors']['stock']) ? $_SESSION['errors']['stock'] : '' ?>
                                                         </span>

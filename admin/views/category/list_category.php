@@ -67,8 +67,13 @@
                         <div class="h-100">
                             <div class="card">
                                 <div class="card-header align-items-center d-flex">
-                                    <h4 class="card-title mb-0 flex-grow-1">Danh Mục Sản Phẩm</h4>
-                                    <a href="?act=form_add_category" class="btn btn-soft-success material-shadow-none"><i class="ri-add-circle-line align-middle me-1"></i>Thêm Danh Mục</a>
+                                    <h4 class="card-title mb-0 flex-grow-1">Danh Sách Sản Phẩm</h4>
+                                    <!--                                    search form-->
+                                    <form class="d-flex justify-content-center" role="search">
+                                        <input class="form-control me-2 w-50 " type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                                        <button class="btn btn-outline-primary" type="submit">Tìm kiếm</button>
+                                    </form>
+                                    <a href="?act=form_add_category" class="btn btn-soft-primary material-shadow-none"><i class="ri-add-circle-line align-middle me-1"></i>Thêm Danh Mục</a>
                                 </div><!-- end card header -->
 
                                 <div class="card-body">

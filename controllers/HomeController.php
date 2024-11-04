@@ -1,8 +1,12 @@
-<?php 
-
+<?php
 class HomeController
 {
+    public $modelHome;
+    public function __construct() {
+        $this->modelHome = new Home();
+    }
+
     public function index() {
-        echo "Xưởng thực hành dự án 1";
+        require_once 'views/home.php';
     }
 }

@@ -1,0 +1,205 @@
+/* Resetting default styles */
+* {
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào width và height */
+    margin: 0; /* Xóa margin mặc định */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+/* Body styles */
+body {
+    background-color: #e9ecef; /* Màu nền sáng cho toàn bộ trang */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font chữ hiện đại */
+}
+
+/* Admin panel layout */
+.admin-panel {
+    display: flex; /* Sử dụng Flexbox để dễ dàng quản lý layout */
+    height: 100vh; /* Chiều cao tối đa cho toàn bộ trang */
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #007bff; /* Màu nền tươi sáng cho sidebar */
+    color: #ffffff; /* Màu chữ trắng */
+    padding: 20px; /* Padding cho sidebar */
+    min-width: 250px; /* Chiều rộng tối thiểu cho sidebar */
+}
+
+.sidebar h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+    font-size: 1.5rem; /* Kích thước tiêu đề */
+}
+
+.sidebar ul {
+    list-style: none; /* Xóa điểm danh sách */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Khoảng cách giữa các mục danh sách */
+}
+
+.sidebar ul li a {
+    color: #ffffff; /* Màu chữ cho liên kết */
+    text-decoration: none; /* Xóa gạch chân */
+    display: block; /* Hiển thị thành phần dạng khối */
+    padding: 12px 15px; /* Padding cho liên kết */
+    border-radius: 5px; /* Bo góc cho liên kết */
+    transition: background-color 0.3s, padding-left 0.3s; /* Hiệu ứng chuyển màu và padding */
+}
+
+.sidebar ul li a:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột */
+    padding-left: 20px; /* Hiệu ứng kéo dãn */
+}
+
+/* Main content styles */
+.main-content {
+    flex-grow: 1; /* Cho phép phần nội dung chính chiếm không gian còn lại */
+    padding: 20px; /* Padding cho nội dung chính */
+    overflow-y: auto; /* Cuộn dọc nếu cần */
+    background-color: #ffffff; /* Màu nền trắng cho nội dung chính */
+    border-left: 1px solid #e0e0e0; /* Viền bên trái để phân cách */
+}
+
+/* Header styles */
+header {
+    display: flex; /* Sử dụng Flexbox cho header */
+    justify-content: space-between; /* Căn giữa khoảng cách giữa tiêu đề và thông tin người dùng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới header */
+    padding-bottom: 10px; /* Padding dưới header */
+    border-bottom: 2px solid #e0e0e0; /* Viền dưới cho header */
+}
+
+header h1 {
+    font-size: 24px; /* Kích thước tiêu đề */
+    color: #343a40; /* Màu chữ tiêu đề */
+}
+
+/* User info styles */
+.user-info {
+    display: flex; /* Sử dụng Flexbox cho thông tin người dùng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.user-info span {
+    margin-right: 20px; /* Khoảng cách giữa tên người dùng và nút đăng xuất */
+    font-weight: bold; /* Chữ đậm cho tên người dùng */
+    color: #343a40; /* Màu chữ cho tên người dùng */
+}
+
+/* Button styles */
+button {
+    border: none; /* Xóa viền mặc định */
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột qua nút */
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển màu và biến đổi */
+}
+
+/* Button hover effects */
+button:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột vào nút */
+    transform: translateY(-2px); /* Hiệu ứng nhấc nút lên */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 40px; /* Khoảng cách dưới cho các section */
+}
+
+h2 {
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề của từng section */
+    color: #343a40; /* Màu chữ tiêu đề section */
+    border-bottom: 2px solid #e0e0e0; /* Viền dưới cho tiêu đề section */
+    padding-bottom: 10px; /* Padding dưới tiêu đề */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+/* Search and add section styles */
+.search-add {
+    display: flex; /* Sử dụng Flexbox để căn giữa các phần tử */
+    justify-content: space-between; /* Căn giữa khoảng cách giữa ô tìm kiếm và nút thêm */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.search-filter {
+    display: flex; /* Sử dụng Flexbox cho ô tìm kiếm */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.search-filter input {
+    padding: 10px; /* Padding cho ô tìm kiếm */
+    width: 300px; /* Chiều rộng của ô tìm kiếm */
+    border: 1px solid #ccc; /* Đường viền cho ô tìm kiếm */
+    border-radius: 5px; /* Bo góc cho ô tìm kiếm */
+    font-size: 16px; /* Kích thước chữ trong ô tìm kiếm */
+    margin-right: 10px; /* Khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho đường viền */
+}
+
+.search-filter input:focus {
+    border-color: #007bff; /* Màu đường viền khi ô tìm kiếm được chọn */
+    outline: none; /* Xóa đường viền mặc định */
+}
+
+/* Table styles */
+.table {
+    width: 100%; /* Độ rộng bảng */
+    margin-top: 20px; /* Khoảng cách phía trên cho bảng */
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+.table th, .table td {
+    padding: 12px; /* Padding cho ô */
+    text-align: left; /* Căn trái nội dung ô */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.table th {
+    background-color: #007bff; /* Màu nền cho tiêu đề bảng */
+    color: white; /* Màu chữ cho tiêu đề bảng */
+    position: sticky; /* Để tiêu đề luôn dính ở trên */
+    top: 0; /* Nằm ở trên cùng */
+    z-index: 10; /* Để chắc chắn nó nằm trên các ô khác */
+}
+
+.table tr:nth-child(even) {
+    background-color: #f1f3f5; /* Màu nền cho hàng chẵn */
+}
+
+.table tr:hover {
+    background-color: #e2e6ea; /* Màu nền khi di chuột vào hàng */
+}
+
+/* Action button styles */
+.action-column {
+    width: 35%; /* Đặt chiều rộng cho cột hành động */
+    text-align: center; /* Căn giữa nội dung trong cột hành động */
+}
+
+.action-button {
+    margin: 0 5px; /* Khoảng cách giữa các nút hành động */
+}
+
+/* Customizing buttons in action column */
+.btn-warning {
+    background-color: #ffc107; /* Màu nền cho nút cập nhật */
+    border: none; /* Xóa viền */
+    color: #212529; /* Màu chữ cho nút */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Màu nền khi di chuột vào nút cập nhật */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Màu nền cho nút xóa */
+    border: none; /* Xóa viền */
+    color: white; /* Màu chữ cho nút */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Màu nền khi di chuột vào nút xóa */
+}
