@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 	<title>Lương</title>
+=======
+	<!-- sua N -->
+	<title>Luong</title>
+>>>>>>> 8a790e43c21e745411af1600abe4d3f95e232a5d
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
